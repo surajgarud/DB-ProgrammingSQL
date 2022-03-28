@@ -30,6 +30,8 @@ select * from Employee
 
  delete from EmpDetails
  where EmployeeID in (5,6,7,8)
+ /* to delete column from table*/
+ alter table EmpDetails Drop column --(Column Name)--
 
  --Alter Table
 
