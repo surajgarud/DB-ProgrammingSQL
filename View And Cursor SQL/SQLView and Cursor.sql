@@ -18,7 +18,7 @@ Select * From EmpView
 select * from Employee
  
 ---================================================================================================-----------
----===========================View For MultiTable  ===============================================
+---=========================== View For MultiTable ===============================================
 
 Create view MultiTableView;           ----------creating VieW TO join TAbles---------
 as
@@ -54,7 +54,8 @@ as
 select * from EmpDetails where salary>20000	
 Select * From RowSecurity
 	
-/*Same for Column lavel View*/	
+
+                                  /*Same for Column lavel View*/	
 
 
 --==========================================================================================================
@@ -69,7 +70,7 @@ create Table StudentMark
    Marks_Science int,
    Marks_Math int,
    Marks_English int,
-   Marks_Marathi int,
+   Marks_Marathi int, 
    Marks_Hindi int
 )
 select * from StudentMark
@@ -104,7 +105,7 @@ from StudentMark
 open sCurser                                --------------opening cursor-----------
 
 fetch next from sCurser into @RollNo,@FirstName,@LastName,@Marks_Science,@Marks_Math,@Marks_English,@Marks_Marathi,@Marks_Hindi
-
+print '*******************************************'
 while @@FETCH_STATUS=0
 begin 
 	print concat('RollNo : ',@RollNo)
@@ -127,10 +128,6 @@ end
 
 close sCurser  
 deallocate sCurser
-
-
-
-
 
 
 
